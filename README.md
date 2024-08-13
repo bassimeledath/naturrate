@@ -26,6 +26,7 @@ Backend
 - OpenAI: Used to format the Pegasus-1 model output as a narration script.
 - ElevenLabs API: Converts the generated narration script into speech.
 - Google Cloud Storage: Used for storing the processed video files.
+- Render: Used for deploying the backend.
 
 ## Usage
 - Upload Video: Go to the homepage and click "Choose File" to select a video file (up to 5MB), then click "Upload Video."
