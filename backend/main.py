@@ -1,20 +1,29 @@
+from models import OpenAIModel
+from moviepy.editor import VideoFileClip, AudioFileClip
+from elevenlabs import client, save
+from twelvelabs import TwelveLabs
+import asyncio
 import os
 import uuid
 import json
 from fastapi import FastAPI, UploadFile, File, BackgroundTasks, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, StreamingResponse
 from google.cloud import storage
 from google.oauth2 import service_account
-from google.auth.transport import requests
-from google.auth import default
 from pydantic import BaseModel
 from datetime import datetime, timedelta
-import asyncio
-from twelvelabs import TwelveLabs
-from elevenlabs import client, save
-from moviepy.editor import VideoFileClip, AudioFileClip
-from models import OpenAIModel
+from dotenv import load_dotenv
+load_dotenv()
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Environment variables (make sure to set these)
 TWELVELABS_API_KEY = os.getenv("TWELVE_LABS_API_KEY")
@@ -75,11 +84,9 @@ async def process_video(video_id: str, file_path: str, index_id="66b90051ab9e013
             index_id=index_id,
             file=file_path
         )
-        print(f"Task id={task.id}")
         task.wait_for_done(sleep_interval=5, callback=on_task_update)
         if task.status != "ready":
             raise RuntimeError(f"Indexing failed with status {task.status}")
-        print(f"The unique identifier of your video is {task.video_id}.")
 
         # Step 2: Generate chapters
         update_status(video_id, "Generating chapters")

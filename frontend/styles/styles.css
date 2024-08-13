@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    /* Center align the header and main container */
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: left;
+    /* Left align the description text */
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    /* Align file input and button horizontally */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+}
+
+input[type="file"] {
+    margin-right: 10px;
+    /* Space between file input and button */
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#status {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+}
+
+#spinner {
+    display: none;
+    margin: 20px auto;
+    width: 50px;
+    height: 50px;
+}
+
+#videoPlayer {
+    display: none;
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+#textContainer {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    display: none;
+}
+
+#textContainer h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#textContainer pre {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #444;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow: auto;
+}

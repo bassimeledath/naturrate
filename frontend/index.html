@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Processing App</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🐎 Naturrate</h1>
+        <p class="description">
+            Naturrate gives your video a David Attenborough style commentary. It is powered by Twelve Labs' Pegasus
+            model to embed and understand your video, then generate a narrative for it. Start by uploading a video!
+            (10MB size limit).
+        </p>
+        <form id="uploadForm">
+            <input type="file" id="videoFile" accept="video/*" required>
+            <button type="submit">Upload Video</button>
+        </form>
+        <img id="spinner" src="assets/spinner.gif" alt="Loading...">
+        <div id="status"></div>
+        <video id="videoPlayer" controls></video>
+        <div id="textContainer" style="display: none;"></div>
+    </div>
+
+    <script src="scripts/api.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>
