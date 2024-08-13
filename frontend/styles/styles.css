@@ -76,6 +76,7 @@ button:hover {
 
 #videoPlayer {
     display: none;
+    max-height: 600px;
     margin-top: 20px;
     width: 100%;
     border-radius: 8px;
