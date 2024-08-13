@@ -1,6 +1,6 @@
 # 🐎 Naturrate
 
-**Naturrate** (pronounced nay-chu-rate) is a web application that gives your video a David Attenborough-style commentary. It uses Twelve Labs' Pegasus-1 model to analyze and summarize your video content into timestamp based chapters, then OpenAI's GPT-4 model formats that summary into a narrative script. Then the Eleven Labs' voice model API is called to give a voice to the script. The application allows you to upload a video, processes it, and then displays the final result for you to download.
+**Naturrate** (pronounced nay-chu-rate) is a web application that gives your video a David Attenborough-style commentary. It uses Twelve Labs' Pegasus-1 model to analyze and summarize your video content into timestamp-based chapters. Then, OpenAI's GPT-4 model formats that summary into a narrative script, and the Eleven Labs voice model API is called to give voice to the script. The application allows you to upload a video, processes it, and then displays the final result for you to download.
 
 ## Features
 
@@ -10,8 +10,8 @@
 
 ## Project Structure
 
-frontend/: Contains the HTML, CSS, and JavaScript files for the frontend.
-backend/: Contains the Python backend files (not required for frontend deployment).
+- **frontend:** Contains the HTML, CSS, and JavaScript files for the frontend.
+- **backend:** Contains the Python backend files (not required for frontend deployment).
 
 ## Technologies Used
 
@@ -37,4 +37,5 @@ Backend
 Initially, I tried to do everything with the Pegasus-1 model i.e. summarize and format the content like a narration but that wasn't effective. While the model is excellent at summarizing video content accurately, using GPT-4 to format the summary to be in a narration format helped a lot.
 
 ## License
-- This project is open-source and available under the MIT License.
+
+This project is open-source and available under the MIT License.
