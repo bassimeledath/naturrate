@@ -3,7 +3,7 @@ document.getElementById("uploadForm").addEventListener("submit", async (event) =
     event.preventDefault();
 
     const fileInput = document.getElementById("videoFile");
-    const maxSize = 5 * 1024 * 1024; // 5MB size limit
+    const maxSize = 10 * 1024 * 1024; // 5MB size limit
 
     if (fileInput.files.length === 0) {
         alert("Please select a video file to upload.");
