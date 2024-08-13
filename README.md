@@ -1,6 +1,6 @@
-# 🐎 Naturrate (pronounced nay-chu-rate)
+# 🐎 Naturrate
 
-**Naturrate** is a web application that gives your video a David Attenborough-style commentary. It uses Twelve Labs' Pegasus-1 model to analyze and summarize your video content into timestamp based chapters, then OpenAI's GPT-4 model formats that summary into a narrative script. Then the Eleven Labs' voice model API is called to give a voice to the script. The application allows you to upload a video, processes it, and then displays the final result for you to download.
+**Naturrate** (pronounced nay-chu-rate) is a web application that gives your video a David Attenborough-style commentary. It uses Twelve Labs' Pegasus-1 model to analyze and summarize your video content into timestamp based chapters, then OpenAI's GPT-4 model formats that summary into a narrative script. Then the Eleven Labs' voice model API is called to give a voice to the script. The application allows you to upload a video, processes it, and then displays the final result for you to download.
 
 ## Features
 
