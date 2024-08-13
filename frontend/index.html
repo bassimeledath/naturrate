@@ -11,14 +11,14 @@
 <body>
     <div class="container">
         <h1>🐎 Naturrate</h1>
-        <p class="description">
-            Naturrate gives your video a David Attenborough style commentary. It is powered by Twelve Labs' Pegasus
-            model to embed and understand your video, then generate a narrative for it. Start by uploading a video!
-            (10MB size limit).
+        <p class="description" style="text-align: center;">
+            Naturrate (pronounced nay-chu-rate) gives your video a David Attenborough style commentary. It is
+            powered by Twelve Labs' Pegasus-1 model to summarize your video content.<br><br>
+            Start by uploading a .mp4 video! (5MB size limit)
         </p>
         <form id="uploadForm">
             <input type="file" id="videoFile" accept="video/*" required>
-            <button type="submit">Upload Video</button>
+            <button type="submit">Process Video</button>
         </form>
         <img id="spinner" src="assets/spinner.gif" alt="Loading...">
         <div id="status"></div>
